@@ -5,12 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 import { DynamicSectionFormComponent } from './dynamic-section/dynamic-section-form/dynamic-section-form.component';
-import { DynamicFormQuestionComponent } from './pages/components/dynamic-form-question/dynamic-form-question.component';
-import { DynamicFormComponent } from './pages/dynamic-form/dynamic-form.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { FormLayoutComponent } from './ui/shared/form-layout/form-layout.component';
-import { SignupComponent } from './ui/pages/signup/signup.component';
-import { FormControlComponent } from './ui/components/form-control/form-control.component';
+import { DynamicFormQuestionComponent } from './dynamic-form/example/pages/components/dynamic-form-question/dynamic-form-question.component';
+import { DynamicFormComponent } from './dynamic-form/example/pages/dynamic-form/dynamic-form.component';
+import { RegisterComponent } from './dynamic-form/example/pages/register/register.component';
+import { FormLayoutComponent } from './dynamic-form/my-implementation/ui/shared/form-layout/form-layout.component';
+import { SignupComponent } from './dynamic-form/my-implementation/ui/pages/signup/signup.component';
+import { FormControlComponent } from './dynamic-form/my-implementation/ui/components/form-control/form-control.component';
 
 @NgModule({
   declarations: [

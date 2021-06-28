@@ -13,14 +13,5 @@ export class SignupComponent {
 
   constructor(_signupFormControlsService: SignupFormControlsService) {
     this.controls$ = _signupFormControlsService.getFormControls();
-
-    // this.controls$.subscribe(
-    //   (resp) => {
-    //     console.warn('[get controls resp]', resp);
-    //   },
-    //   (err) => {
-    //     console.error('Error al obtener los controls del formulario', err);
-    //   }
-    // );
   }
 }
