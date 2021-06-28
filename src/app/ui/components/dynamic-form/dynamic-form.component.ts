@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { ControlnBase } from '../../../domain/forms/controls/bases/control.base';
+import { ControlBase } from '../../../domain/forms/controls/bases/control.base';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -8,7 +8,7 @@ import { ControlnBase } from '../../../domain/forms/controls/bases/control.base'
   styleUrls: ['./dynamic-form.component.scss'],
 })
 export class DynamicFormComponent implements OnInit {
-  @Input() control!: ControlnBase<any>;
+  @Input() control!: ControlBase<string>;
   @Input() form!: FormGroup;
   get isValid() {
     return this.form.controls[this.control.key].valid;

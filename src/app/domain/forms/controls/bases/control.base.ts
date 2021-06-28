@@ -1,4 +1,4 @@
-export class ControlnBase<T> {
+export class ControlBase<T> {
   key: string;
   label: string;
   type: string;

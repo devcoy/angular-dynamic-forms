@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 
-import { ControlnBase } from '../../controls/bases/control.base';
+import { ControlBase } from '../../controls/bases/control.base';
 import { InputControl } from '../../controls/types/text-boxes/input.control';
 
 @Injectable({
   providedIn: 'root',
 })
-export class SignupFormService {
+export class SignupFormControlsService {
   getFormControls() {
-    const signupFormControls: ControlnBase<string>[] = [
+    const signupFormControls: ControlBase<string>[] = [
       new InputControl({
         key: 'fullname',
         label: 'Nombre completo',

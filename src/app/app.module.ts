@@ -8,6 +8,9 @@ import { DynamicSectionFormComponent } from './pages/dynamic-section-form/dynami
 import { DynamicFormQuestionComponent } from './pages/components/dynamic-form-question/dynamic-form-question.component';
 import { DynamicFormComponent } from './pages/dynamic-form/dynamic-form.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { FormLayoutComponent } from './ui/shared/form-layout/form-layout.component';
+import { SignupComponent } from './ui/pages/signup/signup.component';
+import { FormControlComponent } from './ui/components/form-control/form-control.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { RegisterComponent } from './pages/register/register.component';
     DynamicFormQuestionComponent,
     DynamicFormComponent,
     RegisterComponent,
+    FormLayoutComponent,
+    SignupComponent,
+    FormControlComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],
