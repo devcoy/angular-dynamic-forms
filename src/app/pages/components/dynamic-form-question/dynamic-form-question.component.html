@@ -1,9 +1,10 @@
-<main class="container-fluid">
+<div>
   <div [formGroup]="form">
     <label [attr.for]="question.key">{{ question.label }}</label>
 
-    <div [ngSwitch]="question.controlType">
+    <div class="" [ngSwitch]="question.controlType">
       <input
+        class="form-control"
         *ngSwitchCase="'textbox'"
         [formControlName]="question.key"
         [id]="question.key"
@@ -11,6 +12,7 @@
       />
 
       <select
+        class="form-control"
         [id]="question.key"
         *ngSwitchCase="'dropdown'"
         [formControlName]="question.key"
@@ -25,4 +27,4 @@
       {{ question.label }} is required
     </div>
   </div>
-</main>
+</div>
