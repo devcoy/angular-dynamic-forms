@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { ControlBase } from '../../../domain/forms/controls/bases/control.base';
-import { signupFormService } from '../../../domain/forms/form-groups/signup-form/signup-form.service';
+import { ControlBase } from '../../../../domain/forms/controls/bases/control.base';
+import { FormGroupService } from '../../../../domain/forms/form-groups/form-group.service';
 
 @Component({
   selector: 'app-form-layout',
@@ -13,11 +13,10 @@ export class FormLayoutComponent implements OnInit {
   form!: FormGroup;
   payLoad = '';
 
-  constructor(private ctrls: signupFormService) {}
+  constructor(private _formGroupService: FormGroupService) {}
 
   ngOnInit() {
-    // console.warn('[controls to render]', this.controls);
-    this.form = this.ctrls.buildFormGroup(
+    this.form = this._formGroupService.buildFormGroup(
       this.controls as ControlBase<string>[]
     );
   }

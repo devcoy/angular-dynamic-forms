@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ControlBase } from '../../controls/bases/control.base';
+import { ControlBase } from '../controls/bases/control.base';
 
 @Injectable({
   providedIn: 'root',
 })
-export class signupFormService {
+export class FormGroupService {
   buildFormGroup(controls: ControlBase<string>[]) {
     const formGroup: any = {};
 

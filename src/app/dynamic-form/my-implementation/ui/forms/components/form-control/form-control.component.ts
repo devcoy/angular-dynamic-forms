@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { ControlBase } from '../../../domain/forms/controls/bases/control.base';
+import { ControlBase } from '../../../../domain/forms/controls/bases/control.base';
 
 @Component({
   selector: 'app-form-control',
