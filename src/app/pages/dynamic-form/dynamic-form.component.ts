@@ -26,8 +26,8 @@ export class DynamicFormComponent implements OnInit {
 
   buildcvForm() {
     this.cvForm = this.formBuilder.group({
-      fullname: new FormControl('Jorge Cervantes'),
-      jobTitle: new FormControl('Fullstack Web Developer'),
+      fullname: new FormControl(''),
+      jobTitle: new FormControl(''),
       /**
        * Un FormArray es un arreglo de FormControl. Se comporta muy parecido a un arreglo normal
        * y tiene ciertos métodos propios que hace muy sencillo agregar y quitar elementos del mismo.
