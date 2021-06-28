@@ -1,63 +1,24 @@
-<main class="container pt-3 pb-5">
-  <h1>Mi CV</h1>
-  <section class="row">
-    <form class="col-12 col-lg-6" [formGroup]="cvForm" (ngSubmit)="saveCv()">
-      <div class="form-group">
-        <label>Nombre completo: </label>
-        <input class="form-control" type="text" formControlName="fullname" />
+<div class="container-fluid">
+  <div class="row">
+    <form class="col-12" (ngSubmit)="onSubmit()" [formGroup]="form">
+      <div *ngFor="let question of questions" class="form-row">
+        <app-dynamic-form-question
+          [question]="question"
+          [form]="form"
+        ></app-dynamic-form-question>
       </div>
-      <div class="form-group">
-        <label>Puesto: </label>
-        <input class="form-control" type="text" formControlName="jobTitle" />
-      </div>
-      <div>
-        <h3>Experiencía laboral</h3>
-        <div *ngFor="let job of workExperience.controls; index as i">
-          <div class="container-fluid" [formGroup]="job">
-            <div class="form-group">
-              <label>Empresa:</label>
-              <input
-                class="form-control"
-                type="text"
-                formControlName="company"
-              />
-            </div>
-            <div class="form-group">
-              <label>Puesto:</label>
-              <input
-                class="form-control"
-                type="text"
-                formControlName="jobTitle"
-              />
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea
-                class="form-control"
-                formControlName="description"
-              ></textarea>
-            </div>
-            <div class="form-group">
-              <button
-                class="btn btn-outline-danger btn-sm"
-                type="button"
-                (click)="removeWorkExperience(i)"
-              >
-                - Eliminar
-              </button>
-            </div>
-            <hr />
-          </div>
-        </div>
-        <button
-          class="btn btn-outline-success btn-sm mb-5"
-          type="button"
-          (click)="addWorkExperience()"
-        >
-          + Agregar
+
+      <div class="form-group mt-4">
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+          Save
         </button>
       </div>
-      <button class="btn btn-primary" type="submit">Guardar</button>
     </form>
-  </section>
-</main>
+  </div>
+
+  <div class="row">
+    <div class="col-12" *ngIf="payLoad">
+      <strong>Saved the following values</strong><br />{{ payLoad }}
+    </div>
+  </div>
+</div>

@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { DynamicFormComponent } from './pages/dynamic-form/dynamic-form.component';
+
+import { DynamicSectionFormComponent } from './pages/dynamic-section-form/dynamic-section-form.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'dynamic-form', pathMatch: 'full' },
-  { path: 'dynamic-form', component: DynamicFormComponent },
+  { path: '', redirectTo: 'register', pathMatch: 'full' },
+  { path: 'register', component: RegisterComponent },
+  { path: 'dynamic-section-form', component: DynamicSectionFormComponent },
 ];
 
 @NgModule({
