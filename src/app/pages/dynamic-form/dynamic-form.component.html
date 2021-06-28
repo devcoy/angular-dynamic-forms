@@ -1,1 +1,44 @@
-<p>dynamic-form works!</p>
+<h1>Mi CV</h1>
+<section>
+  <form [formGroup]="cvForm" (ngSubmit)="saveCv()">
+    <p>
+      <label>Nombre completo: </label>
+      <input type="text" formControlName="fullname" />
+    </p>
+    <p>
+      <label>Puesto </label>
+      <input type="text" formControlName="jobTitle" />
+    </p>
+    <div>
+      <h3>Experiencía laboral</h3>
+      <div *ngFor="let job of workExperience.controls; index as i">
+        <div [formGroup]="job">
+          <p>
+            <label>Empresa:</label>
+            <input type="text" formControlName="company" />
+          </p>
+          <p>
+            <label>Puesto:</label>
+            <input type="text" formControlName="jobTitle" />
+          </p>
+          <p>
+            <label>Descripción:</label>
+            <textarea
+              cols="30"
+              rows="10"
+              formControlName="description"
+            ></textarea>
+          </p>
+          <p>
+            <button type="button" (click)="removeWorkExperience(i)">
+              - Eliminar
+            </button>
+          </p>
+          <hr />
+        </div>
+      </div>
+      <button type="button" (click)="addWorkExperience()">+ Agregar</button>
+    </div>
+    <p><button type="submit">Guardar</button></p>
+  </form>
+</section>
