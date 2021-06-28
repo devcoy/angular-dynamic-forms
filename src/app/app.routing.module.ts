@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DynamicSectionFormComponent } from './dynamic-section/dynamic-section-form/dynamic-section-form.component';
+import { DynamicSectionFormComponent } from './dynamic-section-form/dynamic-section-form.component';
 import { RegisterComponent } from './dynamic-form/example/pages/register/register.component';
 import { SignupComponent } from './dynamic-form/my-implementation/ui/pages/signup/signup.component';
 

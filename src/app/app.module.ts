@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
-import { DynamicSectionFormComponent } from './dynamic-section/dynamic-section-form/dynamic-section-form.component';
+import { DynamicSectionFormComponent } from './dynamic-section-form/dynamic-section-form.component';
 import { DynamicFormQuestionComponent } from './dynamic-form/example/pages/components/dynamic-form-question/dynamic-form-question.component';
 import { DynamicFormComponent } from './dynamic-form/example/pages/dynamic-form/dynamic-form.component';
 import { RegisterComponent } from './dynamic-form/example/pages/register/register.component';
