@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-dynamic-form',
-  templateUrl: './dynamic-form.component.html',
-  styleUrls: ['./dynamic-form.component.scss'],
+  selector: 'app-dynamic-section-form',
+  templateUrl: './dynamic-section-form.component.html',
+  styleUrls: ['./dynamic-section-form.component.scss'],
 })
-export class DynamicFormComponent implements OnInit {
+export class DynamicSectionFormComponent implements OnInit {
   cvForm: FormGroup;
 
   /**
